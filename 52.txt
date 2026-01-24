@@ -1,1 +1,111 @@
  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Upadhyay</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #eaf6ff;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #d6ecff;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #1e90ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #187bcd;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #cfe9ff;
+            border: 1px solid #cfe9ff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #bcdcff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Ayush Upadhyay</h1>
+        <p>Student | Developer | Learning Web Technologies</p>
+
+        <div class="buttons">
+            <button class="btn btn-primary">Explore</button>
+            <button class="btn btn-secondary">Contact</button>
+        </div>
+
+        <footer>
+            © 2026 Ayush Upadhyay
+        </footer>
+    </div>
+
+</body>
+</html>
