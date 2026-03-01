@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form with Validation</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        label {
+            margin-top: 12px;
+            font-size: 14px;
+            display: block;
+            color: #1e40af;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #bfdbfe;
+            outline: none;
+            font-size: 14px;
+            background: #ffffff;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        .error {
+            color: #dc2626;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <form id="userForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="nameError">
+                Name is required and must be at least 2 characters.
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="emailError">
+                Please enter a valid email address.
+            </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <div class="error" id="passwordError">
+                Password must be at least 8 characters, include one uppercase letter, one lowercase letter, and one number.
+            </div>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <div class="error" id="confirmError">
+                Passwords do not match.
+            </div>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="120">
+            <div class="error" id="ageError">
+                Age must be between 1 and 120.
+            </div>
+
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+    <script src="validation.js"></script>
+
+</body>
+</html>
